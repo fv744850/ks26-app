@@ -25,7 +25,7 @@ spec:
       containers:
         - name: ks26-app
           # 標籤是 commit SHA，唯一且不重複使用。
-          image: docker.io/yansheng133/ks26-app:group1-REPLACE_SHA
+          image: docker.io/yansheng133/ks26-app:group3-36b6159
           imagePullPolicy: IfNotPresent
           ports:
             - name: http
@@ -48,11 +48,11 @@ spec:
                 configMapKeyRef:
                   name: ks26-app-config
                   key: APP_OWNER
-            - name: IMAGE_TAG
+            - name: docker.io/yansheng133/ks26-app:group3-36b6159
               valueFrom:
                 configMapKeyRef:
                   name: ks26-app-config
-                  key: IMAGE_TAG
+                  key: docker.io/yansheng133/ks26-app:group3-36b6159
             - name: INFERENCE_URL
               valueFrom:
                 configMapKeyRef:
